@@ -22,7 +22,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
   <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
   <!-- font awesome style -->
   <link href="css/font-awesome.min.css" rel="stylesheet" />
@@ -40,12 +41,27 @@
 
     <div class="hero_bg_box">
       <div class="bg_img_box">
-        <img src="images/hero-bg.png" alt="">
+        <img src="images/bg.gif" alt="">
       </div>
     </div>
 
     <!-- header section strats -->
     <header class="header_section">
+      <style>
+        @keyframes breathe {
+          0% {
+            transform: scale(1);
+          }
+
+          50% {
+            transform: scale(1.1);
+          }
+
+          100% {
+            transform: scale(1);
+          }
+        }
+      </style>
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
@@ -55,7 +71,8 @@
             </span>
           </a>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class=""> </span>
           </button>
 
@@ -71,7 +88,7 @@
                 <a class="nav-link" href="service.html">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="why.html">Why Us</a>
+                <a class="nav-link" href="paintings.html">Paintings</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="team.html">Contact us</a>
@@ -97,157 +114,66 @@
   <section class="about_section layout_padding">
     <div class="container  ">
       <div class="heading_container heading_center">
-        <h2>
-          About <span>Us</span>
+        <h2 style="margin-top:-75px; padding: 10px;">
+          About <span>Me</span>
         </h2>
-        <p>
-          Magni quod blanditiis non minus sed aut voluptatum illum quisquam aspernatur ullam vel beatae rerum ipsum voluptatibus
-        </p>
-      </div>
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="images/about-img.png" alt="">
+        <div style="display: flex; justify-content: center; align-items: flex-start; text-align: left; scrollbar-width: thin;
+        height: 100vh;
+        overflow-y: auto;">
+          <div style="width: 50%; margin-right: 20px; display: flex; justify-content: center; align-items: center;">
+            <p style="margin: 0; line-height: 1.6;">
+              Welcome to my colorful world! I’m Adarsh, a part-time painter who believes that art has the power to
+              transform everyday moments into something extraordinary. My journey began in a cozy corner of my home,
+              where I first picked up a brush and let my imagination run wild.
+
+              Painting for me is not just a hobby; it’s a way to capture the beauty I see around me—whether it’s the
+              soft glow of a sunset or the vibrant energy of nature. I draw inspiration from the world around me, my
+              travels, and the emotions that fill my days. My style blends bold colors with gentle brush strokes,
+              creating a sense of movement and life.
+
+              As a part-time artist, I cherish the balance between my creative pursuits and daily life. Each piece I
+              create tells a story, and I’m thrilled to share these stories with you. Whether you’re looking for a
+              unique piece to brighten your home or a special gift for a loved one, I’m here to help bring your vision
+              to life.
+
+              Thank you for stopping by! Let’s embark on this colorful journey together—feel free to reach out to
+              discuss my work or share your own artistic passions!
+            </p>
+          </div>
+          <div style="width: 50%; display: flex; justify-content: center; align-items: center;">
+            <div class="img-box"
+              style="width: 100%; display: flex; justify-content: center; align-items: center; height: 100vh;">
+              <img src="images/painter.png" alt="" style="max-width: 100%; height: auto; 
+                          animation: breathe 2s infinite; 
+                          transition: transform 0.3s; margin-top: -200px;">
+            </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <h3>
-              We Are Art Creation
-            </h3>
-            <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
-            </p>
-            <p>
-              Molestiae odio earum non qui cumque provident voluptates, repellendus exercitationem, possimus at iste corrupti officiis unde alias eius ducimus reiciendis soluta eveniet. Nobis ullam ab omnis quasi expedita.
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
+
+
+
+
       </div>
-    </div>
   </section>
 
   <!-- end about section -->
 
   <!-- info section -->
 
-  <section class="info_section layout_padding2">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-3 info_col">
-          <div class="info_contact">
-            <h4>
-              Address
-            </h4>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  Location
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call +01 1234567890
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  demo@gmail.com
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="info_social">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <!-- <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a> -->
-            <!-- <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a> -->
-            <a href="">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 info_col">
-          <div class="info_detail">
-            <h4>
-              Info
-            </h4>
-            <p>
-              necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful
-            </p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-2 mx-auto info_col">
-          <div class="info_link_box">
-            <h4>
-              Links
-            </h4>
-            <div class="info_links">
-              <a class="active" href="index.html">
-                Home
-              </a>
-              <a class="" href="about.html">
-                About
-              </a>
-              <a class="" href="service.html">
-                Services
-              </a>
-              <a class="" href="why.html">
-                Why Us
-              </a>
-              <a class="" href="team.html">
-                Team
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 info_col ">
-          <h4>
-            Subscribe
-          </h4>
-          <form action="#">
-            <input type="text" placeholder="Enter email" />
-            <button type="submit">
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- end info section -->
 
   <!-- footer section -->
-  <section class="footer_section">
-    <div class="container">
-      <p>
-        &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
-      </p>
-    </div>
-  </section>
-  <!-- footer section -->
 
+  <!-- footer section -->
+  <audio id="snapSound" src="song/soundclick.mp3" preload="auto"></audio>
+  <div class="elfsight-app-95b7146c-3981-4142-82f5-9ae7d470af86" data-elfsight-app-lazy></div>
   <!-- jQery -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
   <!-- bootstrap js -->
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <!-- owl slider -->
@@ -258,8 +184,20 @@
   <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
-  <!-- End Google Map -->
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
 
+  <!-- End Google Map -->
+  <script>
+    // Function to play the snap sound
+    function playSnap() {
+      const snapSound = document.getElementById('snapSound');
+      snapSound.currentTime = 0; // Rewind to the start
+      snapSound.play(); // Play the sound
+    }
+
+    // Attach click event listener to the whole document
+    document.addEventListener('click', playSnap);
+  </script>
 </body>
 
 </html>
