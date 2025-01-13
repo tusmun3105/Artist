@@ -2,7 +2,7 @@ $white: #ffffff;
 $black: #000000;
 // $primary1: #0cb1a8;
 $primary1: #00bbf0;
-$primary2: #00204a;
+$primary2: #393939;
 $textCol: #1f1f1f;
 
 // import fonts - font-family: 'Open Sans', sans-serif;
@@ -139,7 +139,7 @@ a:focus {
 .sub_page {
   .hero_area {
     min-height: auto;
-    background: linear-gradient(130deg, #231a6f, #0f054c);
+    background: linear-gradient(130deg, #5a5032, #0f054c);
 
     .hero_bg_box {
       display: none;
@@ -407,6 +407,7 @@ a:focus {
       h5 {
         font-weight: bold;
         text-transform: uppercase;
+        color: bisque;
       }
 
       p {}
@@ -569,6 +570,7 @@ a:focus {
           color: $primary1;
           font-weight: 600;
           position: relative;
+          color: bisque;
         }
 
       }

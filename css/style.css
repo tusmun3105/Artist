@@ -130,7 +130,7 @@ a:focus {
 
 .sub_page .hero_area {
   min-height: auto;
-  background: linear-gradient(130deg, #231a6f, #0f054c);
+  background: linear-gradient(130deg, #5a5032, #0f054c);
 }
 
 .sub_page .hero_area .hero_bg_box {
@@ -278,16 +278,97 @@ a:focus {
 }
 
 .slider_section .detail-box {
-  color: #00204a;
+  color: #393939;
 }
+
+/* .slider_section .detail-box h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #ff007d;
+} */
 
 .slider_section .detail-box h1 {
   font-size: 3rem;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 15px;
-  color: #ffffff;
+  color: #ff007d; /* Base color for text */
+  position: relative;
+  display: inline-block; /* Ensure the pseudo-elements align properly */
 }
+
+/* Multi-color dripping effect */
+.slider_section .detail-box h1::before,
+.slider_section .detail-box h1::after {
+  content: '';
+  position: absolute;
+  top: 70%; /* Start dripping from the middle of the letters */
+  width: 5px; /* Width of the drip */
+  height: 0;
+  border-radius: 50%;
+  animation: drip 2s infinite ease-in-out;
+}
+
+/* First drip with pink color */
+.slider_section .detail-box h1::before {
+  background-color: #ff007d; /* Pink */
+  left: 3%; /* Position near the start of the text */
+  animation-delay: 0.5s;
+}
+
+/* Second drip with blue color */
+.slider_section .detail-box h1::after {
+  background-color: #ff007d; /* Blue */
+  left: 70%; /* Position near the end of the text */
+  animation-delay: 1s;
+}
+
+/* Additional drips for more colors */
+.slider_section .detail-box h1 span:nth-child(1),
+.slider_section .detail-box h1 span:nth-child(2) {
+  position: absolute;
+  top: 70%;
+  width: 5px;
+  height: 0;
+  border-radius: 50%;
+  animation: drip 2s infinite ease-in-out;
+}
+
+/* Third drip with yellow color */
+.slider_section .detail-box h1 span:nth-child(1) {
+  background-color: #ffdd00; /* Yellow */
+  left: 40%;
+  animation-delay: 0.7s;
+}
+
+/* Fourth drip with green color */
+.slider_section .detail-box h1 span:nth-child(2) {
+  background-color: #00ff7d; /* Green */
+  left: 90%;
+  animation-delay: 1.2s;
+}
+
+/* Dripping animation */
+@keyframes drip {
+  0% {
+    height: 0;
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    height: 20px; /* Drip elongates */
+    transform: translateY(10px);
+    opacity: 0.7;
+  }
+  100% {
+    height: 0;
+    transform: translateY(30px); /* Drip falls */
+    opacity: 0;
+  }
+}
+
 
 .slider_section .detail-box p {
   color: #fefefe;
@@ -451,10 +532,11 @@ a:focus {
 .service_section .box .detail-box h5 {
   font-weight: bold;
   text-transform: uppercase;
+  color: bisque;
 }
 
 .service_section .box .detail-box a {
-  color: #00204a;
+  color: #393939;
   font-weight: 600;
 }
 
@@ -488,7 +570,7 @@ a:focus {
 }
 
 .about_section {
-  background-color: #00204a;
+  background-color: #393939;
   color: #ffffff;
 }
 
@@ -552,7 +634,7 @@ a:focus {
   min-width: 120px;
   min-height: 120px;
   border-radius: 100%;
-  border: 5px solid #00204a;
+  border: 5px solid #393939;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -567,7 +649,7 @@ a:focus {
 .paintings_section .box .img-box img {
   width: 55px;
   height: auto;
-  fill: #00204a;
+  fill: #393939;
 }
 
 .paintings_section .box h5 {
@@ -607,7 +689,7 @@ a:focus {
 /*team section */
 .team_section {
   text-align: center;
-  background-color: #00204a;
+  background-color: #393939;
   color: #ffffff;
 }
 
@@ -628,8 +710,8 @@ a:focus {
   -webkit-transition: all .1s;
   transition: all .1s;
   margin-top: 45px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#002759), to(#002b64));
-  background: linear-gradient(to bottom, #002759, #002b64);
+  background: -webkit-gradient(linear, left top, left bottom, from(#5e5e5e), to(#002b64));
+  background: linear-gradient(to bottom, #5e5e5e, #002b64);
 }
 
 .team_section .team_container .box .img-box {
@@ -746,7 +828,7 @@ a:focus {
 }
 
 .client_section .box .detail-box i {
-  color: #00204a;
+  color: #393939;
   margin-bottom: 10px;
 }
 
@@ -775,12 +857,12 @@ a:focus {
 
 .client_section .owl-carousel .owl-nav .owl-prev:hover,
 .client_section .owl-carousel .owl-nav .owl-next:hover {
-  color: #00204a;
+  color: #393939;
 }
 
 /* client section end */
 .info_section {
-  background-color: #00204a;
+  background-color: #393939;
   color: #ffffff;
   padding: 45px 0 15px 0;
 }
@@ -924,7 +1006,7 @@ a:focus {
 }
 
 .footer_section p {
-  color: #00204a;
+  color: #393939;
   padding: 25px 0;
   margin: 0;
 }
@@ -933,5 +1015,21 @@ a:focus {
   color: inherit;
 }
 
+.box{
+  background: linear-gradient(130deg, #5a5032, #0f054c);
+  background-image: linear-gradient(130deg, rgb(90, 80, 50), rgb(15, 5, 76));
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: initial;
+  background-repeat: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  height: 525px;
+}
 
+p{
+  font-size: larger;
+  color: #8b7f5d;
+}
 /*# sourceMappingURL=style.css.map */
