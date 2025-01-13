@@ -24,28 +24,25 @@
   <style>
     .card-container {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      flex-direction: column; /* Stack images vertically */
+      align-items: center; /* Center-align images horizontally */
       padding: 20px;
     }
+
     .card-content {
-      /* width: calc(25% - 10px); 25% for four cards per row with some margin */
-      min-width:20vw;
-      height:50vh;
-      margin-bottom: 20px; /* Space between rows */
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s;
+      width: 100%; /* Make the card span the full width */
+      max-width: 800px; /* Optional: Limit the maximum width of the image */
+      margin-bottom: 20px; /* Space between images */
+      border: none; /* Remove borders */
+      border-radius: 0; /* Remove rounded corners */
+      box-shadow: none; /* Remove box shadow */
+      overflow: hidden; /* Ensure image fits within the container */
     }
-    .card-content:hover {
-      transform: scale(1.05); /* Slight zoom effect on hover */
-    }
+
     .card-content img {
-      width: 50%;
-      height: 150px;
-      object-fit: cover;
+      width: 100%; /* Make the image fill the card width */
+      height: auto; /* Maintain aspect ratio */
+      object-fit: cover; /* Ensure image covers the area */
     }
   </style>
 
@@ -101,18 +98,7 @@
     <!-- end header section -->
   </div>
 
-  <div class="card-container" id="cardContainer" style="scrollbar-width: thin;
-  height: 100vh;
-  overflow-y: auto; margin-bottom:200px; padding-bottom: 200px; background: linear-gradient(130deg, #5a5032, #0f054c);
-    background-image: linear-gradient(130deg, rgb(90, 80, 50), rgb(15, 5, 76));
-    background-position-x: initial;
-    background-position-y: initial;
-    background-size: initial;
-    background-repeat: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-">
+  <div class="card-container" id="cardContainer" style="scrollbar-width: thin; height: 100vh; overflow-y: auto; margin-bottom:200px; padding-bottom: 200px; background: linear-gradient(130deg, #5a5032, #0f054c);">
     <!-- Cards will be dynamically inserted here -->
   </div>
 
@@ -131,44 +117,22 @@
   <script src="https://static.elfsight.com/platform/platform.js" async></script>
 
   <script>
-    // Array of images and descriptions
+    // Array of images (no titles or descriptions)
     const artworks = [
-      {
-        image: 'images/painter.png',
-        title: 'Title 1',
-        description: 'Description 1'
-      },
-      {
-        image: 'images/painter.png',
-        title: 'Title 2',
-        description: 'Description 2'
-      },
-      {
-        image: 'images/painter.png',
-        title: 'Title 3',
-        description: 'Description 3'
-      },
-      {
-        image: 'images/painter.png',
-        title: 'Title 4',
-        description: 'Description 4'
-      }
+      { image: 'imagesToshow/pic1.jpg' },
+      { image: 'imagesToshow/pic2.jpg' },
+      { image: 'imagesToshow/pic3.jpg' },
       // Add more artworks as needed
     ];
 
-    // Function to create and display cards
+    // Function to create and display images
     function displayArtworks() {
       const container = document.getElementById('cardContainer');
       artworks.forEach(art => {
         const card = document.createElement('div');
-
         card.innerHTML = `
           <div class="card-content">
-            <img src="${art.image}" alt="${art.title}">
-            <div class="card-description" style="padding: 10px; text-align: center;">
-              <h5 style="margin: 0; font-size: 1.1em; color: #333;">${art.title}</h5>
-              <p style="color: #666; font-size: 0.8em;">${art.description}</p>
-            </div>
+            <img src="${art.image}" alt="Artwork">
           </div>
         `;
         container.appendChild(card);
